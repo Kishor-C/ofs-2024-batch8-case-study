@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- event is an inbuilt object-->
+    <h2 onclick="elementFinder(event)">Click Here</h2>
+    <h3 onclick="elementFinder(event)">Click Again Here</h3>
+    <div id="content"></div>
+    <script type="text/javascript">
+      // e accepts an object of Event
+      function elementFinder(e) {
+        let divEle = document.querySelector("#content");
+        //console.log(e.target);
+        //divEle.textContent = "<i>Some content</i>";
+        divEle.textContent = e.target.tagName;
+      }
+      //   let counter = 1;
+      //   function addCounter() {
+      //     counter += 1;
+      //     //console.log(counter);
+      //     let element = document.querySelector("#counterElement"); // accesses div#counterElement
+      //     element.innerHTML = "Counter = " + counter; //single or double quotes has no difference
+      //   }
+    </script>
+  </body>
+</html>
