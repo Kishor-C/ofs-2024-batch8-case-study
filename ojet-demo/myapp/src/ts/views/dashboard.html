@@ -1,0 +1,31 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Input Text Demo</h1>
+  <div>
+    <oj-c-input-text
+              id="text-input"
+              value="{{firstname}}"
+              label-hint="Enter firstname"
+              label-edge="inside"></oj-c-input-text>
+    
+
+    <h3>
+      Hey! <oj-bind-text value="[[firstname]]"></oj-bind-text>
+    </h3>
+  </div>
+  <div>
+    <h1>Input Number Demo</h1>
+    <oj-c-input-number
+                value="{{salary}}"
+                label-hint="Enter salary"
+                min="0"
+                step="0"></oj-c-input-number>
+    <h3>
+      Salary is <oj-bind-text value="[[salary]]"></oj-bind-text>
+    </h3>
+  </div>
+</div>

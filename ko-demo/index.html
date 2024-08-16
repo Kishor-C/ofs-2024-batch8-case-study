@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Learning Knockout.js databinding</h2>
+    <input type="text" data-bind="value:username" />
+    <h3>Hello <span data-bind="text: username"></span></h3>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js" integrity="sha512-ysKUdNpkwX3o//Dgzz+iaqgL1kQg59Gs/hHixXKzV9XmcPkFxrlw+nR/Ikhbe2FxMUf7Kcm24IqynPH2Lq26ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        // view model that can bind the model to the view
+        function AppViewModel() {
+            // observables can detect the changes
+            this.username=ko.observable("Kishor");
+        }
+        // bind the data to the view
+        ko.applyBindings(new AppViewModel());
+    </script>
+</body>
+</html>
